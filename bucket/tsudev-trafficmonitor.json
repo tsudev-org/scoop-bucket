@@ -1,6 +1,6 @@
 {
-    "version": "26.11.1001",
-    "description": "Theo dõi tốc độ mạng, CPU, RAM trên thanh tác vụ Windows - bản Việt hóa, gia cố bảo mật của TrafficMonitor",
+    "version": "26.11.1201",
+    "description": "Theo dõi tốc độ mạng, CPU, RAM trên thanh tác vụ Windows - tiếng Việt, gia cố bảo mật (phái sinh của TrafficMonitor)",
     "homepage": "https://trafficmonitor.tsudev.com",
     "license": {
         "identifier": "Anti-996",
@@ -8,23 +8,23 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://github.com/tsudev-org/tsudev-trafficmonitor/releases/download/V26.11.1001-vn/tsudev-trafficmonitor_26.11.1001_x64_Lite.zip",
-            "hash": "a7adf581824664b8a68a5f0258763cd2966c5eb805506507c58851c61db3b453"
+            "url": "https://github.com/tsudev-org/tsudev-trafficmonitor/releases/download/V26.11.1201-vn/tsudev-trafficmonitor_26.11.1201_x64_Lite.zip",
+            "hash": "bea3e7128416a0a08482c5e9cf01c7b7c7ff406ef34c3399e9be75ee3dfd082c"
         },
         "32bit": {
-            "url": "https://github.com/tsudev-org/tsudev-trafficmonitor/releases/download/V26.11.1001-vn/tsudev-trafficmonitor_26.11.1001_x86_Lite.zip",
-            "hash": "9712c025d6c4d091d0552a8a2782b8ed05070405b3e6417224d1fb251c3d44fd"
+            "url": "https://github.com/tsudev-org/tsudev-trafficmonitor/releases/download/V26.11.1201-vn/tsudev-trafficmonitor_26.11.1201_x86_Lite.zip",
+            "hash": "3ff59b966def08862d319203258339307980e1ed0ae5858d0f6a80d5e6ea4656"
         },
         "arm64": {
-            "url": "https://github.com/tsudev-org/tsudev-trafficmonitor/releases/download/V26.11.1001-vn/tsudev-trafficmonitor_26.11.1001_arm64ec_Lite.zip",
-            "hash": "c41325672a56dc54f94225735e43b72b7a80d9ff9c76747b70bb77c75e698ea9"
+            "url": "https://github.com/tsudev-org/tsudev-trafficmonitor/releases/download/V26.11.1201-vn/tsudev-trafficmonitor_26.11.1201_arm64ec_Lite.zip",
+            "hash": "a2a8b0e172f2aa74c20a066109448ec06c909f9881cb2939eb07f5a444d491f3"
         }
     },
-    "extract_dir": "TrafficMonitor",
+    "extract_dir": "tsudev-trafficmonitor",
     "shortcuts": [
         [
-            "TrafficMonitor.exe",
-            "tsudev TrafficMonitor"
+            "tsudev-trafficmonitor.exe",
+            "tsudev-trafficmonitor"
         ]
     ],
     "checkver": {
