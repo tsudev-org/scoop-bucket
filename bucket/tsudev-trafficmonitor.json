@@ -1,0 +1,51 @@
+{
+    "version": "26.11.1001",
+    "description": "Theo dõi tốc độ mạng, CPU, RAM trên thanh tác vụ Windows - bản Việt hóa, gia cố bảo mật của TrafficMonitor",
+    "homepage": "https://trafficmonitor.tsudev.com",
+    "license": {
+        "identifier": "Anti-996",
+        "url": "https://github.com/tsudev-org/tsudev-trafficmonitor/blob/HEAD/LICENSE"
+    },
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/tsudev-org/tsudev-trafficmonitor/releases/download/V26.11.1001-vn/tsudev-trafficmonitor_26.11.1001_x64_Lite.zip",
+            "hash": "a7adf581824664b8a68a5f0258763cd2966c5eb805506507c58851c61db3b453"
+        },
+        "32bit": {
+            "url": "https://github.com/tsudev-org/tsudev-trafficmonitor/releases/download/V26.11.1001-vn/tsudev-trafficmonitor_26.11.1001_x86_Lite.zip",
+            "hash": "9712c025d6c4d091d0552a8a2782b8ed05070405b3e6417224d1fb251c3d44fd"
+        },
+        "arm64": {
+            "url": "https://github.com/tsudev-org/tsudev-trafficmonitor/releases/download/V26.11.1001-vn/tsudev-trafficmonitor_26.11.1001_arm64ec_Lite.zip",
+            "hash": "c41325672a56dc54f94225735e43b72b7a80d9ff9c76747b70bb77c75e698ea9"
+        }
+    },
+    "extract_dir": "TrafficMonitor",
+    "shortcuts": [
+        [
+            "TrafficMonitor.exe",
+            "tsudev TrafficMonitor"
+        ]
+    ],
+    "checkver": {
+        "url": "https://api.github.com/repos/tsudev-org/tsudev-trafficmonitor/releases/latest",
+        "jsonpath": "$.tag_name",
+        "regex": "V([\\d.]+)-vn"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/tsudev-org/tsudev-trafficmonitor/releases/download/V$version-vn/tsudev-trafficmonitor_$version_x64_Lite.zip"
+            },
+            "32bit": {
+                "url": "https://github.com/tsudev-org/tsudev-trafficmonitor/releases/download/V$version-vn/tsudev-trafficmonitor_$version_x86_Lite.zip"
+            },
+            "arm64": {
+                "url": "https://github.com/tsudev-org/tsudev-trafficmonitor/releases/download/V$version-vn/tsudev-trafficmonitor_$version_arm64ec_Lite.zip"
+            }
+        },
+        "hash": {
+            "url": "$baseurl/SHA256SUMS.txt"
+        }
+    }
+}

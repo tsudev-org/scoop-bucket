@@ -1,0 +1,25 @@
+{
+    "version": "1.18.2-lotus.2",
+    "description": "Gửi tệp giữa các thiết bị trong cùng mạng, không cần Internet - bản Việt hóa, gia cố bảo mật của LocalSend",
+    "homepage": "https://lotus.tsudev.com",
+    "license": "Apache-2.0",
+    "url": "https://github.com/tsudev-org/tsudev-lotus/releases/download/v1.18.2-lotus.2/tsudev-lotus-1.18.2-windows-x86-64.zip",
+    "hash": "4c4a9f9b559a77841997fe2a64ad84548aba7d6306245e10cb31ec111cef1ddd",
+    "shortcuts": [
+        [
+            "tsudev_lotus.exe",
+            "tsudev Lotus"
+        ]
+    ],
+    "checkver": {
+        "url": "https://api.github.com/repos/tsudev-org/tsudev-lotus/releases/latest",
+        "jsonpath": "$.tag_name",
+        "regex": "v((?<short>[\\d.]+)-lotus\\.\\d+)"
+    },
+    "autoupdate": {
+        "url": "https://github.com/tsudev-org/tsudev-lotus/releases/download/v$version/tsudev-lotus-$matchShort-windows-x86-64.zip",
+        "hash": {
+            "url": "$baseurl/SHA256SUMS.txt"
+        }
+    }
+}
