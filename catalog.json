@@ -24,6 +24,22 @@
    "installFull": "scoop bucket add tsudev https://github.com/tsudev-org/scoop-bucket; scoop install tsudev/lotus-share"
   },
   {
+   "name": "tsudev-contact",
+   "version": "26.11.1001",
+   "description": "Chuyển danh bạ CSV sang vCard (.vcf) để nạp vào điện thoại, chạy ngoại tuyến hoàn toàn",
+   "homepage": "https://contact.tsudev.com",
+   "license": "Apache-2.0",
+   "arch": [
+    "any"
+   ],
+   "commands": [
+    "tsudev-contact"
+   ],
+   "replacedBy": null,
+   "install": "scoop install tsudev/tsudev-contact",
+   "installFull": "scoop bucket add tsudev https://github.com/tsudev-org/scoop-bucket; scoop install tsudev/tsudev-contact"
+  },
+  {
    "name": "tsudev-files",
    "version": "2.4.0-vn.1",
    "description": "Chuyển đổi tệp ngoại tuyến 260+ định dạng - bản Việt hóa, gia cố bảo mật của Filee",
