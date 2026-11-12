@@ -33,6 +33,8 @@ jobs:
           }
           git config user.name 'tsudev-bot'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add bucket
+          python tools/catalog.py
+          if ($LASTEXITCODE) { throw 'sinh catalog.json that bai' }
+          git add bucket catalog.json
           git commit -m "chore(bucket): cap nhat theo Release moi"
           git push

@@ -16,6 +16,14 @@ scoop install tsudev/tsudev-trafficmonitor
 
 Cập nhật: `scoop update *`. Gỡ: `scoop uninstall <gói>`.
 
+## Danh mục máy đọc
+
+[`catalog.json`](catalog.json) (schema 1, cùng dạng `https://pkg.tsudev.com/catalog.json`) liệt kê mọi gói trong
+bucket: phiên bản, kiến trúc, lệnh, gói thay thế khi đổi tên (`replacedBy`), lệnh cài. Website `*.tsudev.com` và
+`install.ps1` của tsudev.com đọc tệp này lúc build qua
+`https://raw.githubusercontent.com/tsudev-org/scoop-bucket/main/catalog.json`. Sinh bằng `python3 tools/catalog.py`;
+CI từ chối nếu tệp cũ, `excavator` sinh lại cùng commit cập nhật manifest.
+
 ## Bảo mật
 
 - Mọi manifest ghim **SHA-256** của tệp tải về. Mã băm lấy từ `SHA256SUMS` của chính Release trên `tsudev-org`,
