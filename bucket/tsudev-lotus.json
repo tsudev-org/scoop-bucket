@@ -1,23 +1,27 @@
 {
-    "version": "1.18.2-lotus.2",
-    "description": "Gửi tệp giữa các thiết bị trong cùng mạng, không cần Internet - bản Việt hóa, gia cố bảo mật của LocalSend",
+    "version": "1.18.2-lotus.3",
+    "description": "[Tên cũ, dùng lotus-share] Lotus Share - gửi tệp giữa các thiết bị trong cùng mạng, không cần Internet (bản Việt hóa, gia cố bảo mật của LocalSend)",
     "homepage": "https://lotus.tsudev.com",
     "license": "Apache-2.0",
-    "url": "https://github.com/tsudev-org/tsudev-lotus/releases/download/v1.18.2-lotus.2/tsudev-lotus-1.18.2-windows-x86-64.zip",
-    "hash": "4c4a9f9b559a77841997fe2a64ad84548aba7d6306245e10cb31ec111cef1ddd",
+    "notes": [
+        "Gói tsudev-lotus đã đổi tên thành lotus-share (Lotus Share). Gói này vẫn nhận bản mới, nhưng nên chuyển:",
+        "  scoop uninstall tsudev-lotus; scoop install tsudev/lotus-share"
+    ],
+    "url": "https://github.com/tsudev-org/lotus-share/releases/download/v1.18.2-lotus.3/lotus-share-1.18.2-windows-x86-64.zip",
+    "hash": "febc687928f0ac2f8ea8a19770afb54cbcb442e1dbaa9952111422bd5193b3ae",
     "shortcuts": [
         [
-            "tsudev_lotus.exe",
-            "tsudev Lotus"
+            "lotus_share.exe",
+            "Lotus Share"
         ]
     ],
     "checkver": {
-        "url": "https://api.github.com/repos/tsudev-org/tsudev-lotus/releases/latest",
+        "url": "https://api.github.com/repos/tsudev-org/lotus-share/releases/latest",
         "jsonpath": "$.tag_name",
         "regex": "v((?<short>[\\d.]+)-lotus\\.\\d+)"
     },
     "autoupdate": {
-        "url": "https://github.com/tsudev-org/tsudev-lotus/releases/download/v$version/tsudev-lotus-$matchShort-windows-x86-64.zip",
+        "url": "https://github.com/tsudev-org/lotus-share/releases/download/v$version/lotus-share-$matchShort-windows-x86-64.zip",
         "hash": {
             "url": "$baseurl/SHA256SUMS.txt"
         }

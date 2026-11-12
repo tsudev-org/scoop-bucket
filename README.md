@@ -12,7 +12,7 @@ scoop install tsudev/tsudev-trafficmonitor
 | `tsudev-trafficmonitor` | [tsudev-trafficmonitor](https://trafficmonitor.tsudev.com) - tốc độ mạng, CPU, RAM trên thanh tác vụ (x64, x86, ARM64) | `scoop install tsudev/tsudev-trafficmonitor` |
 | `tsudev-files` | [tsudev Files](https://files.tsudev.com) - chuyển đổi tệp ngoại tuyến 260+ định dạng (lệnh `tsudev-files`) | `scoop install tsudev/tsudev-files` |
 | `tsudev-swico` | [SWICO](https://swico.tsudev.com) - kiểm tra bản quyền Windows/Office, cấu hình máy (lệnh `tsudev-swico`) | `scoop install tsudev/tsudev-swico` |
-| `tsudev-lotus` | [Lotus](https://lotus.tsudev.com) - gửi tệp trong mạng nội bộ | `scoop install tsudev/tsudev-lotus` |
+| `lotus-share` | [Lotus Share](https://lotus.tsudev.com) - gửi tệp trong mạng nội bộ, tương thích LocalSend (tên cũ `tsudev-lotus` vẫn cập nhật, nên chuyển) | `scoop install tsudev/lotus-share` |
 
 Cập nhật: `scoop update *`. Gỡ: `scoop uninstall <gói>`.
 

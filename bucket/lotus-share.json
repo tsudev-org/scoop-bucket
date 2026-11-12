@@ -1,0 +1,25 @@
+{
+    "version": "1.18.2-lotus.3",
+    "description": "Lotus Share - gửi tệp giữa các thiết bị trong cùng mạng, không cần Internet (bản Việt hóa, gia cố bảo mật của LocalSend)",
+    "homepage": "https://lotus.tsudev.com",
+    "license": "Apache-2.0",
+    "url": "https://github.com/tsudev-org/lotus-share/releases/download/v1.18.2-lotus.3/lotus-share-1.18.2-windows-x86-64.zip",
+    "hash": "febc687928f0ac2f8ea8a19770afb54cbcb442e1dbaa9952111422bd5193b3ae",
+    "shortcuts": [
+        [
+            "lotus_share.exe",
+            "Lotus Share"
+        ]
+    ],
+    "checkver": {
+        "url": "https://api.github.com/repos/tsudev-org/lotus-share/releases/latest",
+        "jsonpath": "$.tag_name",
+        "regex": "v((?<short>[\\d.]+)-lotus\\.\\d+)"
+    },
+    "autoupdate": {
+        "url": "https://github.com/tsudev-org/lotus-share/releases/download/v$version/lotus-share-$matchShort-windows-x86-64.zip",
+        "hash": {
+            "url": "$baseurl/SHA256SUMS.txt"
+        }
+    }
+}
