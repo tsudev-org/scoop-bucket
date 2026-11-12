@@ -8,6 +8,8 @@ that tren Windows. Goi doi ten (notes chua `scoop install tsudev/<ten moi>`) ghi
   python3 tools/catalog.py           # ghi catalog.json
   python3 tools/catalog.py --check   # CI: loi neu catalog.json cu so voi bucket/
 """
+from __future__ import annotations
+
 import json
 import re
 import sys
