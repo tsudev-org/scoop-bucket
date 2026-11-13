@@ -32,3 +32,10 @@ CI từ chối nếu tệp cũ, `excavator` sinh lại cùng commit cập nhật
 - Workflow `excavator` kiểm Release mới mỗi 6 giờ, **cài thử thật** trên Windows trước khi cập nhật manifest.
 - Quy ước đóng gói: [`tsudev-standards/docs/PACKAGING.md`](https://github.com/tsudev-org/tsudev-standards/blob/main/docs/PACKAGING.md).
 - Báo lỗ hổng: theo `SECURITY.md` của repo sản phẩm tương ứng, không mở Issue công khai.
+
+## Giấy phép
+
+Repo này (manifest, `catalog.json`, công cụ): [Apache-2.0](LICENSE). Bản phân phối lại phải giữ `NOTICE` (điều 4(d)).
+Mỗi ứng dụng giữ giấy phép của sản phẩm gốc. Tên và logo tsudev là nhãn hiệu, không nằm trong giấy phép: xem
+[TRADEMARKS.md](https://github.com/tsudev-org/tsudev/blob/main/TRADEMARKS.md). PR chạm `LICENSE`, `NOTICE` hoặc xoá dòng
+bản quyền cần chủ sở hữu phê duyệt (check `Bảo vệ bản quyền`, xem `AGENTS.md`).
