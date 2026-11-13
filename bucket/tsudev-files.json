@@ -3,7 +3,7 @@
     "description": "Chuyển đổi tệp ngoại tuyến 260+ định dạng - bản Việt hóa, gia cố bảo mật của Filee",
     "homepage": "https://files.tsudev.com",
     "license": "MIT",
-    "url": "https://github.com/tsudev-org/tsudev-files/releases/download/v2.4.0-vn.1/tsudev-files-2.4.0-vn.1-win-Portable.zip",
+    "url": "https://github.com/tsudev-org/tsufiles/releases/download/v2.4.0-vn.1/tsudev-files-2.4.0-vn.1-win-Portable.zip",
     "hash": "2459d5917ba3741ddeaad372095850128cd27a065ffce855e0de67e277f620d6",
     "bin": [
         [
@@ -18,12 +18,12 @@
         ]
     ],
     "checkver": {
-        "url": "https://api.github.com/repos/tsudev-org/tsudev-files/releases/latest",
+        "url": "https://api.github.com/repos/tsudev-org/tsufiles/releases/latest",
         "jsonpath": "$.tag_name",
         "regex": "v([\\w.-]+)"
     },
     "autoupdate": {
-        "url": "https://github.com/tsudev-org/tsudev-files/releases/download/v$version/tsudev-files-$version-win-Portable.zip",
+        "url": "https://github.com/tsudev-org/tsufiles/releases/download/v$version/tsudev-files-$version-win-Portable.zip",
         "hash": {
             "url": "$baseurl/tsudev-files-$version-SHA256SUMS.txt"
         }
