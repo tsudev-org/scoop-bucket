@@ -25,18 +25,29 @@ jobs:
       - name: checkver -Update, cai thu, day len main
         shell: pwsh
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # Scoop đọc token ở SCOOP_GH_TOKEN (không phải GITHUB_TOKEN). Thiếu token thì API GitHub giới hạn 60
+          # lượt/giờ cho cả máy chạy dùng chung và checkver trả 403 cho mọi gói.
+          SCOOP_GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           $ErrorActionPreference = 'Stop'
           $env:PATH = "$HOME\scoop\shims;$env:PATH"
-          & "$HOME\scoop\apps\scoop\current\bin\checkver.ps1" -Dir bucket -Update
+          $ra = & "$HOME\scoop\apps\scoop\current\bin\checkver.ps1" -Dir bucket -Update *>&1 | Out-String
+          Write-Host $ra
+          # 403/giới hạn API KHÔNG được thành "Khong co ban moi": đỏ để người ta thấy.
+          if ($ra -match 'rate limit exceeded|\(403\)|is not valid') { throw 'checkver loi API GitHub - khong ket luan duoc' }
           $doi = git status --porcelain bucket
           if (-not $doi) { Write-Host 'Khong co ban moi'; exit 0 }
           foreach ($dong in $doi) {
             $tep = ($dong -split '\s+')[-1]
             scoop install (Resolve-Path $tep).Path
             if ($LASTEXITCODE) { throw "cai thu $tep that bai - khong day len" }
-            scoop uninstall ([IO.Path]::GetFileNameWithoutExtension($tep))
+            # Gỡ thử: Windows đôi khi còn khóa lối tắt vừa tạo ("being used by another process") - thử lại, và
+            # không làm hỏng lượt cập nhật vì bước CÀI đã chứng minh manifest đúng.
+            $ten = [IO.Path]::GetFileNameWithoutExtension($tep)
+            foreach ($lan in 1..3) {
+              try { scoop uninstall $ten; if (-not $LASTEXITCODE) { break } } catch { Write-Host "go thu lan $lan loi: $_" }
+              Start-Sleep -Seconds 5
+            }
           }
           git config user.name 'tsudev-bot'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
