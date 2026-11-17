@@ -22,10 +22,10 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/tsudev-org/tsudisk/releases/download/v$version/tsudisk_$version_x64-portable.exe#/tsudisk.exe",
+                "url": "https://github.com/tsudev-org/tsudisk/releases/download/v$version/tsudisk_$version_windows-x64-portable.exe#/tsudisk.exe",
                 "hash": {
                     "url": "$baseurl/SHA256SUMS.txt",
-                    "regex": "$sha256\\s+tsudisk_$version_x64-portable\\.exe"
+                    "regex": "$sha256\\s+tsudisk_$version_windows-x64-portable\\.exe"
                 }
             }
         }
