@@ -14,7 +14,7 @@ scoop install tsudev/tsudev-trafficmonitor
 | `tsuswico` | [Tsu Swico](https://swico.tsudev.com) - kiểm tra bản quyền Windows/Office, cấu hình máy (lệnh `tsuswico`, `swico`; tên cũ `tsudev-swico` vẫn cập nhật, nên chuyển) | `scoop install tsudev/tsuswico` |
 | `tsucwico` | [Tsu Cwico](https://cwico.tsudev.com) - kiểm tra bản quyền Windows/Office, cấu hình máy, bản dòng lệnh (lệnh `cwico`) | `scoop install tsudev/tsucwico` |
 | `tsucontact` | [Tsu Contact](https://contact.tsudev.com) - chuyển danh bạ CSV sang vCard (.vcf), ngoại tuyến (lệnh `tsucontact`; tên cũ `tsudev-contact` vẫn cập nhật, nên chuyển) | `scoop install tsudev/tsucontact` |
-| `lotus-share` | [Lotus Share](https://lotus.tsudev.com) - gửi tệp trong mạng nội bộ, tương thích LocalSend (tên cũ `tsudev-lotus` vẫn cập nhật, nên chuyển) | `scoop install tsudev/lotus-share` |
+| `lotus-share` | [Lotus Share](https://lotus.tsudev.com) - gửi tệp trong mạng nội bộ, không cần Internet (tên cũ `tsudev-lotus` vẫn cập nhật, nên chuyển) | `scoop install tsudev/lotus-share` |
 
 Cập nhật: `scoop update *`. Gỡ: `scoop uninstall <gói>`.
 
