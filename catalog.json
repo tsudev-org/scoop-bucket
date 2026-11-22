@@ -25,7 +25,7 @@
   },
   {
    "name": "tsucontact",
-   "version": "26.11.1601",
+   "version": "26.11.2201",
    "description": "Tsu Contact - chuyển danh bạ CSV sang vCard (.vcf) để nạp vào điện thoại, chạy ngoại tuyến hoàn toàn",
    "homepage": "https://contact.tsudev.com",
    "license": "Apache-2.0",
