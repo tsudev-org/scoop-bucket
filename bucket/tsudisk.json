@@ -1,19 +1,35 @@
 {
-    "version": "26.11.1801",
+    "version": "26.11.2301",
     "description": "TsuDisk - quản lý phân vùng ổ cứng Windows an toàn: phân tích, lập kế hoạch, mở rộng ổ C: kể cả khi Recovery chắn đường",
     "homepage": "https://disk.tsudev.com",
     "license": "Apache-2.0",
     "notes": [
         "Lệnh chỉ đọc chạy với quyền thường: tsudisk phan-tich, tsudisk ke-hoach C:",
-        "Lệnh ghi đĩa cần Terminal (Admin): tsudisk mo-rong C:"
+        "Lệnh ghi đĩa cần Terminal (Admin): tsudisk mo-rong C:",
+        "Giao diện cửa sổ: tsudisk-gui (lối tắt TsuDisk trong Start Menu)"
     ],
     "architecture": {
         "64bit": {
-            "url": "https://github.com/tsudev-org/tsudisk/releases/download/v26.11.1801/tsudisk_26.11.1801_windows-x64-portable.exe#/tsudisk.exe",
-            "hash": "09fad62a7f5a8845d099af527f53cdfde73a8f03f9d3486804b15b2d852cc61f"
+            "url": [
+                "https://github.com/tsudev-org/tsudisk/releases/download/v26.11.2301/tsudisk_26.11.2301_windows-x64-portable.exe#/tsudisk.exe",
+                "https://github.com/tsudev-org/tsudisk/releases/download/v26.11.2301/tsudisk-gui_26.11.2301_windows-x64-portable.exe#/tsudisk-gui.exe"
+            ],
+            "hash": [
+                "d0bd47d04f33ef2a44e35983904b0d43c8c259224e4151c21babf76308855aba",
+                "5937321370c2f0a4185fcf7dfa47d2e4d5aa3d80762607bb73480f47d8b3d877"
+            ]
         }
     },
-    "bin": "tsudisk.exe",
+    "bin": [
+        "tsudisk.exe",
+        "tsudisk-gui.exe"
+    ],
+    "shortcuts": [
+        [
+            "tsudisk-gui.exe",
+            "TsuDisk"
+        ]
+    ],
     "checkver": {
         "url": "https://api.github.com/repos/tsudev-org/tsudisk/releases/latest",
         "jsonpath": "$.tag_name",
@@ -22,11 +38,20 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/tsudev-org/tsudisk/releases/download/v$version/tsudisk_$version_windows-x64-portable.exe#/tsudisk.exe",
-                "hash": {
-                    "url": "$baseurl/SHA256SUMS.txt",
-                    "regex": "$sha256\\s+tsudisk_$version_windows-x64-portable\\.exe"
-                }
+                "url": [
+                    "https://github.com/tsudev-org/tsudisk/releases/download/v$version/tsudisk_$version_windows-x64-portable.exe#/tsudisk.exe",
+                    "https://github.com/tsudev-org/tsudisk/releases/download/v$version/tsudisk-gui_$version_windows-x64-portable.exe#/tsudisk-gui.exe"
+                ],
+                "hash": [
+                    {
+                        "url": "$baseurl/SHA256SUMS.txt",
+                        "regex": "$sha256\\s+tsudisk_$version_windows-x64-portable\\.exe"
+                    },
+                    {
+                        "url": "$baseurl/SHA256SUMS.txt",
+                        "regex": "$sha256\\s+tsudisk-gui_$version_windows-x64-portable\\.exe"
+                    }
+                ]
             }
         }
     }
