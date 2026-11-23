@@ -1,22 +1,22 @@
 {
-    "version": "26.11.2302",
+    "version": "26.11.2303",
     "description": "TsuDisk - quản lý phân vùng ổ cứng Windows an toàn: phân tích, lập kế hoạch, mở rộng ổ C: kể cả khi Recovery chắn đường",
     "homepage": "https://disk.tsudev.com",
     "license": "Apache-2.0",
     "notes": [
         "Lệnh chỉ đọc chạy với quyền thường: tsudisk phan-tich, tsudisk ke-hoach C:",
         "Lệnh ghi đĩa cần Terminal (Admin): tsudisk mo-rong C:",
-        "Giao diện cửa sổ: tsudisk-gui (lối tắt TsuDisk trong Start Menu); đổi chữ cái/nhãn ổ cần mở với quyền quản trị"
+        "Giao diện cửa sổ: tsudisk-gui (lối tắt TsuDisk trong Start Menu); đổi chữ cái/nhãn ổ và tạo phân vùng cần mở với quyền quản trị"
     ],
     "architecture": {
         "64bit": {
             "url": [
-                "https://github.com/tsudev-org/tsudisk/releases/download/v26.11.2302/tsudisk_26.11.2302_windows-x64-portable.exe#/tsudisk.exe",
-                "https://github.com/tsudev-org/tsudisk/releases/download/v26.11.2302/tsudisk-gui_26.11.2302_windows-x64-portable.exe#/tsudisk-gui.exe"
+                "https://github.com/tsudev-org/tsudisk/releases/download/v26.11.2303/tsudisk_26.11.2303_windows-x64-portable.exe#/tsudisk.exe",
+                "https://github.com/tsudev-org/tsudisk/releases/download/v26.11.2303/tsudisk-gui_26.11.2303_windows-x64-portable.exe#/tsudisk-gui.exe"
             ],
             "hash": [
-                "386b9d5e1d881b83951a77b49199bdf01ff1cbb03f28528000dd09123c8cc0f7",
-                "d7239b9b14710b4d39a4bed1670ae34afbddccc23744fa0b2c81b65ed5a16625"
+                "a99a82429d68b62a065aa06fc1af07a5bc1aa70fdddb763575d4583ce1f1eac6",
+                "8f099dd83626ef779d79490b266b0bc97335f5a9a8e57a0227682c8012bdce64"
             ]
         }
     },
